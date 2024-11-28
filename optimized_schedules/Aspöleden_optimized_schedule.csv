@@ -1,36 +1,43 @@
-Optimizing ferry operations involves a balance between meeting demand, reducing emissions, and minimizing underutilized trips. Here are some strategies to consider:
+Given the optimization goals and current fleet, we can propose the following:
 
-1. **Demand Forecasting**: Use historical data to predict peak and off-peak times. This will help you schedule ferries more efficiently, reducing unnecessary trips during low-demand periods and ensuring adequate service during high-demand periods.
+1. Optimized Schedule (in CSV format):
 
-2. **Fleet Allocation**: Allocate more ferries to routes with higher demand. For the Aspöleden route, consider using both ferries (Yxlan and Aspö3) during peak hours, and just one during off-peak hours.
-
-3. **Fuel Efficiency**: Consider using more fuel-efficient ferries or even electric ferries if possible. This can significantly reduce emissions.
-
-4. **Optimized Schedules**: Adjust ferry departure times to better match demand. For example, if demand is highest at the start and end of the workday, schedule more ferries during these times.
-
-Given the information provided, here's an optimized schedule for the Aspöleden route:
-
-Optimized Schedule (CSV format):
+```csv
+Timestamp,Route,Ferry
+00:30,Karlskrona_Aspö,Yxlan
+01:20,Aspö_Karlskrona,Yxlan
+02:10,Karlskrona_Aspö,Yxlan
+03:00,Aspö_Karlskrona,Yxlan
+03:50,Karlskrona_Aspö,Yxlan
+04:40,Aspö_Karlskrona,Yxlan
+05:30,Karlskrona_Aspö,Yxlan
+06:00,Aspö_Karlskrona,Yxlan
+06:30,Karlskrona_Aspö,Yxlan
+07:00,Aspö_Karlskrona,Aspö3
+07:30,Karlskrona_Aspö,Yxlan
+08:00,Aspö_Karlskrona,Aspö3
+08:30,Karlskrona_Aspö,Yxlan
+09:00,Aspö_Karlskrona,Aspö3
+09:30,Karlskrona_Aspö,Yxlan
+10:00,Aspö_Karlskrona,Aspö3
+10:30,Karlskrona_Aspö,Yxlan
+11:00,Aspö_Karlskrona,Aspö3
 ```
-Timestamp,Route
-05:30,Karlskrona_Aspö
-06:00,Aspö_Karlskrona
-06:30,Karlskrona_Aspö
-07:00,Aspö_Karlskrona
-07:30,Karlskrona_Aspö
-08:00,Aspö_Karlskrona
-08:30,Karlskrona_Aspö
-09:00,Aspö_Karlskrona
-10:00,Karlskrona_Aspö
-11:00,Aspö_Karlskrona
-12:00,Karlskrona_Aspö
-13:00,Aspö_Karlskrona
-14:00,Karlskrona_Aspö
-15:00,Aspö_Karlskrona
-16:00,Karlskrona_Aspö
-16:30,Aspö_Karlskrona
-17:00,Karlskrona_Aspö
-17:30,Aspö_Karlskrona
-18:00,Karlskrona_Aspö
-18:30,Aspö_Karlskrona
-19
+This pattern continues until 22:00 when Aspö3 is taken out of service and Yxlan continues on the 50-minute schedule until 06:00 the next morning.
+
+2. Adjusted Fleet Assignments:
+
+- Off-peak hours (10 PM–6 AM): Only Yxlan operates.
+- Peak hours (6 AM–10 PM): Both Yxlan and Aspö3 operate, alternating routes every 30 minutes.
+
+3. Feasibility Analysis:
+
+This proposed schedule ensures that demand is met during peak hours by utilizing both ferries. During off-peak hours, reducing service to a single ferry every 50 minutes should still meet reduced demand while also reducing emissions. It's important to monitor passenger numbers during these off-peak times to ensure that demand is still being met with the reduced service. 
+
+This schedule also allows for regular maintenance of the ferries, as each has a period out of service each day. This can lead to increased longevity and reduced operating costs in the long term.
+
+4. Detailed Schedule:
+
+The detailed schedule is provided above in CSV format, with the pattern continuing until 22:00 when Aspö3 is taken out of service. This schedule ensures that there is a ferry departing every 30 minutes during peak hours, and every 50 minutes during off-peak hours. 
+
+Please note that this is a proposed schedule and may need to be adjusted based on actual demand and other operational considerations. It is also recommended to have a contingency plan in case of any ferry breakdown or other unforeseen situations.

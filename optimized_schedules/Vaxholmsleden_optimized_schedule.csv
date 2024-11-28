@@ -1,42 +1,38 @@
-Optimizing ferry operations for the Vaxholmsleden route would involve several steps. Here are some recommendations:
+Optimization of the ferry schedules and fleet usage for the Vaxholmsleden route involves analyzing the current timetable, traffic demand, and fleet availability. The main goals are to retain only Castella during late-night hours, schedule trips every 20 minutes during late-night periods, and use both Nina and Castella during peak times to meet demand.
 
-1. **Use energy-efficient ferries**: To reduce emissions, consider using energy-efficient or hybrid ferries. These types of ferries use less fuel and produce fewer emissions compared to traditional ferries.
+1. Optimized Schedule:
 
-2. **Optimize ferry schedules**: To meet demand efficiently and avoid unmet demand during peak hours, the ferry schedules should be optimized based on passenger demand. 
+To optimize the schedule, we need to consider the crossing time, ferry line length, and demand. Given the crossing time of 6 minutes and a line length of 970 meters, a round trip would take approximately 15 minutes, allowing for loading and unloading of passengers. This would allow for four trips per hour. However, to meet the goal of scheduling trips every 20 minutes during late-night periods, we would need to adjust this to three trips per hour during these times. 
 
-   - During peak hours, ensure that both ferries are in operation and increase the frequency of trips to accommodate more passengers.
-   - During off-peak hours, reduce the frequency of trips or use only one ferry to minimize underutilized trips.
-   - Ensure that the ferry schedule aligns with the schedules of other modes of transportation to provide seamless travel for passengers.
-
-3. **Implement a dynamic pricing model**: To further optimize operations, consider implementing a dynamic pricing model where fares are higher during peak hours and lower during off-peak hours. This can help manage demand and ensure that ferries are not underutilized.
-
-Here is an example of an optimized schedule for the Vaxholmsleden route:
+A sample optimized schedule in CSV format could look like this:
 
 ```
-Timestamp,Route
-06:00,Vaxholm_Rindö
-06:20,Vaxholm_Rindö
-06:40,Vaxholm_Rindö
-07:00,Vaxholm_Rindö
-07:20,Vaxholm_Rindö
-07:40,Vaxholm_Rindö
-08:00,Vaxholm_Rindö
-08:20,Vaxholm_Rindö
-08:40,Vaxholm_Rindö
-09:00,Vaxholm_Rindö
-09:30,Vaxholm_Rindö
-10:00,Vaxholm_Rindö
-10:30,Vaxholm_Rindö
-11:00,Vaxholm_Rindö
-11:30,Vaxholm_Rindö
-12:00,Vaxholm_Rindö
-12:30,Vaxholm_Rindö
-13:00,Vaxholm_Rindö
-13:30,Vaxholm_Rindö
-14:00,Vaxholm_Rindö
-14:30,Vaxholm_Rindö
-15:00,Vaxholm_Rindö
-15:20,Vaxholm_Rindö
-15:40,Vaxholm_Rindö
-16:00,Vaxholm_Rindö
-16:20,V
+Timestamp,Route,Ferry
+00:00,Vaxholm_Rindö,Castella
+00:20,Vaxholm_Rindö,Castella
+00:40,Vaxholm_Rindö,Castella
+01:00,Vaxholm_Rindö,Castella
+01:20,Vaxholm_Rindö,Castella
+01:40,Vaxholm_Rindö,Castella
+02:00,Vaxholm_Rindö,Castella
+...
+06:00,Vaxholm_Rindö,Nina
+06:15,Vaxholm_Rindö,Castella
+06:30,Vaxholm_Rindö,Nina
+06:45,Vaxholm_Rindö,Castella
+...
+```
+
+2. Adjusted Fleet Assignments:
+
+During peak times, both Nina and Castella will be used to meet demand. They will alternate trips to ensure maximum efficiency and service. During late-night hours (10 PM–6 AM), only Castella will be operational. This will reduce emissions and operating costs while still providing necessary service.
+
+3. Feasibility Analysis:
+
+The proposed changes are feasible given the current fleet and route details. By using only one ferry during late-night hours, we can reduce emissions and operating costs. Scheduling trips every 20 minutes during these times ensures that service is still provided for those who need it. During peak times, using both ferries allows us to meet increased demand. 
+
+This optimization also has the potential to improve customer satisfaction by providing more consistent service during late-night hours and ensuring that demand is met during peak times. 
+
+However, it's important to note that this proposal is based on the current demand and fleet availability. Any changes in these factors would require a reevaluation of the proposed schedule and fleet assignments. For example, if demand increases significantly during late-night hours, it may be necessary to add Nina back into the rotation during these times. Similarly, if one of the ferries needs to be taken out of service for maintenance, the schedule would need to be adjusted accordingly. 
+
+Overall, this proposal provides a starting point for optimizing the ferry schedules and fleet usage for the Vaxholmsleden route. It meets the stated goals and provides a framework for future adjustments based on changes in demand or fleet availability.

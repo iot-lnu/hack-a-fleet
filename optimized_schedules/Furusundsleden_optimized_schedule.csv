@@ -1,17 +1,39 @@
-Optimization Plan:
+1. Optimized Schedule (CSV format):
 
-The optimization of the Furusundsleden route will focus on the following key points:
-1. Matching demand with supply: This will involve adjusting the schedule and fleet allocation to ensure that the number of ferries and their frequency matches the demand at different times of the day. 
-2. Reducing emissions: This can be achieved by minimizing underutilized trips and considering the use of more environmentally friendly ferry options, such as electric or hybrid ferries.
+The optimized schedule will be based on the assumption that the ferry can return immediately after reaching the destination. Given that the crossing time is only 4 minutes, the ferries should be able to make a round trip in about 10 minutes, accounting for loading and unloading. 
 
-Optimized Schedule:
+```
+Timestamp,Route,Ferry
+00:00,Furusund_Yxlan,Merkurius
+00:10,Yxlan_Furusund,Merkurius
+00:20,Furusund_Yxlan,Merkurius
+00:30,Yxlan_Furusund,Merkurius
+...
+23:30,Yxlan_Furusund,Merkurius
+```
+During summer holidays and weekends, Gulli will also operate:
+```
+Timestamp,Route,Ferry
+00:05,Furusund_Yxlan,Gulli
+00:15,Yxlan_Furusund,Gulli
+00:25,Furusund_Yxlan,Gulli
+00:35,Yxlan_Furusund,Gulli
+...
+23:35,Yxlan_Furusund,Gulli
+```
 
-Given the short crossing time of 4 minutes and the current schedule which offers a crossing every 30 minutes, it seems that the schedule is already quite efficient. However, without specific data on demand at different times of the day, it's difficult to optimize the schedule further. One suggestion could be to reduce the frequency of crossings during off-peak hours (e.g., late at night) to reduce emissions and operating costs. 
+2. Adjusted Fleet Assignments:
 
-Fleet Allocation Adjustments:
+For winter weekdays, only Merkurius will operate. It will cover all trips throughout the day.
 
-Currently, there are two ferries operating on the Furusundsleden route: Merkurius and Gulli. To reduce emissions, one option could be to replace these with more environmentally friendly alternatives. Electric ferries, for example, produce zero emissions and are increasingly being used in ferry operations worldwide. Another option could be hybrid ferries, which use a combination of diesel and electric power and produce fewer emissions than traditional diesel ferries. 
+During summer holidays and weekends, both Merkurius and Gulli will operate. Merkurius will start at the hour, and Gulli will start 5 minutes after. This will ensure a ferry departs every 5 minutes.
 
-It's also worth considering the size and capacity of the ferries. If demand is consistently high, larger ferries may be more efficient as they can carry more passengers per trip. Conversely, if demand is low, smaller ferries may be more efficient as they use less fuel.
+For off-peak trips, Gulli will be used to reduce emissions. Off-peak hours can be defined as 10:00-16:00 on weekdays.
 
-Without specific data on the current fleet and demand levels, it's difficult to make more detailed recommendations. However, the principles outlined above should provide a good starting point for optimizing the Furusundsleden ferry operations.
+3. Feasibility Analysis:
+
+This proposed schedule and fleet assignment should meet demand as it provides a consistent and frequent service. The use of Gulli during off-peak hours will help reduce emissions. However, this proposal assumes that there is sufficient demand for a ferry every 5 minutes during peak times and that the ferries can be loaded and unloaded quickly. These assumptions should be validated with data on passenger demand and operational efficiency.
+
+4. Fully Optimized Detailed Schedule:
+
+The fully optimized detailed schedule would require additional data on passenger demand at different times of day and week, as well as operational constraints such as maintenance schedules and crew availability. Once this data is available, a more detailed optimization can be performed.
