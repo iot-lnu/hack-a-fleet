@@ -1,14 +1,14 @@
-import openai
 import pandas as pd
 import json
 import os
+from openai import OpenAI
 
 # Read OpenAI API key from file
 with open("OPENAIKEY.txt", "r") as file:
     api_key = file.read().strip()
 
 # Initialize OpenAI client
-client = openai.OpenAI(api_key=api_key)
+client = OpenAI(api_key=api_key)
 
 # Load necessary data
 ferry_trips_data = pd.read_csv("ferry_trips_data.csv")
@@ -61,7 +61,7 @@ Provide:
 1. A detailed optimized schedule in CSV format. DO NOT SIMPLIFY IT.
 2. Adjusted fleet assignments for peak and off-peak hours.
 3. Feasibility analysis for proposed changes, especially ensuring demand is met and emissions are reduced.
-4. Simulated amount of emissions decreased and demand being met. 
+4. Simulated amount of emissions decreased and demand being met.
 """
 
 # Save optimized schedules to CSV

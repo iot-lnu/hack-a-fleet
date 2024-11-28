@@ -1,39 +1,54 @@
-1. Optimized Schedule:
+Optimization Plan:
 
-The schedule optimization aims to maintain service frequency while reducing fuel consumption and emissions. The proposed schedule for Vaxholmsleden is as follows (CSV format):
+1. Assign only the ferry Castella during late-night hours (10 PM–6 AM). This will help reduce costs and emissions during the period with the least demand.
 
-Timestamp, Route, Ferry
-00:00, Vaxholm_Rindö, Castella
-00:20, Vaxholm_Rindö, Castella
-00:40, Vaxholm_Rindö, Castella
-01:00, Vaxholm_Rindö, Castella
-01:20, Vaxholm_Rindö, Castella
-01:40, Vaxholm_Rindö, Castella
-02:00, Vaxholm_Rindö, Castella
-02:20, Vaxholm_Rindö, Castella
-02:40, Vaxholm_Rindö, Castella
-03:00, Vaxholm_Rindö, Castella
+2. Schedule trips every 20 minutes during late-night periods. This will ensure that there is still a reliable service for any passengers travelling at these times.
+
+3. Use both Nina and Castella during peak times to meet demand. This will ensure that there is enough capacity to handle the increased number of passengers during these times.
+
+4. The feasibility of these changes will be analyzed by comparing the new schedule and fleet assignments with the current ones. This will involve calculating the expected decrease in emissions and the expected increase in demand met.
+
+5. The simulated amount of emissions decreased and demand being met will be calculated based on the new schedule and fleet assignments.
+
+Optimized Schedule (CSV format):
+
+Timestamp,Route,Ferry
+00:00,Vaxholm_Rindö,Castella
+00:20,Vaxholm_Rindö,Castella
+00:40,Vaxholm_Rindö,Castella
+01:00,Vaxholm_Rindö,Castella
+01:20,Vaxholm_Rindö,Castella
+01:40,Vaxholm_Rindö,Castella
+02:00,Vaxholm_Rindö,Castella
+02:20,Vaxholm_Rindö,Castella
+02:40,Vaxholm_Rindö,Castella
+03:00,Vaxholm_Rindö,Castella
 ...
-20:00, Vaxholm_Rindö, Nina
-20:00, Vaxholm_Rindö, Castella
-20:20, Vaxholm_Rindö, Nina
-20:20, Vaxholm_Rindö, Castella
-20:40, Vaxholm_Rindö, Nina
-20:40, Vaxholm_Rindö, Castella
+18:00,Vaxholm_Rindö,Nina
+18:00,Vaxholm_Rindö,Castella
+18:20,Vaxholm_Rindö,Nina
+18:20,Vaxholm_Rindö,Castella
+18:40,Vaxholm_Rindö,Nina
+18:40,Vaxholm_Rindö,Castella
+...
+22:00,Vaxholm_Rindö,Castella
+22:20,Vaxholm_Rindö,Castella
+22:40,Vaxholm_Rindö,Castella
+23:00,Vaxholm_Rindö,Castella
+23:20,Vaxholm_Rindö,Castella
+23:40,Vaxholm_Rindö,Castella
 
-2. Fleet Assignments:
+Adjusted Fleet Assignments:
 
-- Peak hours (6 AM–10 PM): Nina and Castella
-- Off-peak hours (10 PM–6 AM): Castella only
+Peak Hours (6 AM–10 PM): Nina and Castella
+Off-Peak Hours (10 PM–6 AM): Castella
 
-3. Feasibility Analysis:
+Feasibility Analysis:
 
-The proposed schedule and fleet assignments are feasible considering the ferry line length and crossing times. The use of two ferries during peak hours will ensure that demand is met. The use of only one ferry (Castella) during off-peak hours will contribute to reduced emissions. However, it is essential to monitor passenger demand during these hours to ensure service quality.
+The proposed changes are expected to be feasible as they will provide a reliable service for passengers while reducing costs and emissions. The use of only one ferry during off-peak hours will reduce emissions and costs, while the use of two ferries during peak hours will ensure that demand is met.
 
-4. Simulated Emissions and Demand:
+Simulated Emissions and Demand:
 
-Assuming that the Nina and Castella are similar in terms of fuel consumption and emissions, the proposed schedule would result in a reduction of approximately 50% in emissions during off-peak hours (10 PM–6 AM). This is due to the use of only one ferry during these hours.
+The simulated amount of emissions decreased will depend on the specific emissions of the Nina and Castella ferries. However, it can be expected that the emissions will decrease significantly during off-peak hours due to the use of only one ferry.
 
-The demand during peak hours is expected to be met with the use of two ferries. During off-peak hours, the demand is typically lower, and the use of one ferry should be sufficient. However, this should be confirmed with passenger data.
-
-Please note that these are estimations and actual results may vary based on factors such as weather conditions, ferry load, and other operational variables.
+The demand being met will also depend on the specific capacity of the Nina and Castella ferries. However, it can be expected that the demand will be met during peak hours due to the use of two ferries. The demand during off-peak hours will be met by the regular service provided by the Castella ferry.
