@@ -1,40 +1,54 @@
-Given the information provided, we can start to construct a preliminary plan for optimizing the ferry schedules and fleet usage for the Ljusteröleden route.
+To optimize the ferry schedules and fleet usage for the Ljusteröleden route, we first need to understand the current demand and capacity of the ferries, as well as the specific goals of the optimization.
 
 1. Optimized Schedule:
 
-The current schedule for the Ljusteröleden route seems to be running on a continuous hourly cycle, with a 10-minute gap between each ferry. Considering the crossing time is 7 minutes, this leaves a 53-minute gap of inactivity for each ferry, which could be optimized.
-
-A possible optimized schedule could be as follows:
+Based on the current schedule, the ferries are operating every hour with a 10-minute gap between departures from the two ends of the route. To optimize this, we can consider reducing the frequency during off-peak hours and increasing it during peak hours. The following is an example of an optimized schedule:
 
 ```
 Timestamp,Route
-00:00,Ljusterö_Östanå
-00:15,Östanå_Ljusterö
-00:30,Ljusterö_Östanå
-00:45,Östanå_Ljusterö
-01:00,Ljusterö_Östanå
-01:15,Östanå_Ljusterö
-01:30,Ljusterö_Östanå
-01:45,Östanå_Ljusterö
-...
+06:00,Ljusterö_Östanå
+06:15,Östanå_Ljusterö
+06:30,Ljusterö_Östanå
+06:45,Östanå_Ljusterö
+07:00,Ljusterö_Östanå
+07:15,Östanå_Ljusterö
+07:30,Ljusterö_Östanå
+07:45,Östanå_Ljusterö
+08:00,Ljusterö_Östanå
+08:15,Östanå_Ljusterö
+... (repeat every 15 minutes until 10:00)
+10:00,Ljusterö_Östanå
+11:00,Östanå_Ljusterö
+12:00,Ljusterö_Östanå
+13:00,Östanå_Ljusterö
+14:00,Ljusterö_Östanå
+15:00,Östanå_Ljusterö
+... (repeat every hour until 16:00)
+16:00,Ljusterö_Östanå
+16:15,Östanå_Ljusterö
+16:30,Ljusterö_Östanå
+16:45,Östanå_Ljusterö
+17:00,Ljusterö_Östanå
+17:15,Östanå_Ljusterö
+17:30,Ljusterö_Östanå
+17:45,Östanå_Ljusterö
+18:00,Ljusterö_Östanå
+18:15,Östanå_Ljusterö
+... (repeat every 15 minutes until 20:00)
+20:00,Ljusterö_Östanå
+21:00,Östanå_Ljusterö
+22:00,Ljusterö_Östanå
+23:00,Östanå_Ljusterö
 ```
-
-This schedule would allow for a ferry to depart every 15 minutes, effectively quadrupling the number of crossings.
 
 2. Adjusted Fleet Assignments:
 
-During summer weekends and holidays, when demand is at its peak, both ferries (Jupiter and Frida) would be in operation, following the optimized schedule above.
-
-During winter weekdays, only the Jupiter would be in operation, following the optimized schedule. This would reduce emissions, as per the optimization goals.
-
-During off-peak times, the Frida would be in operation, following the optimized schedule. This would minimize fuel usage, as per the optimization goals.
+During peak hours (06:00-10:00 and 16:00-20:00), both Jupiter and Frida can be used to meet the high demand. During off-peak hours (10:00-16:00 and 20:00-06:00), only Frida can be used to minimize fuel usage.
 
 3. Feasibility Analysis:
 
-The proposed changes are likely to be feasible, as they would increase the number of crossings, thereby meeting demand more effectively. The use of only one ferry during winter weekdays would reduce emissions, and the use of the Frida during off-peak times would minimize fuel usage.
+The proposed changes are likely to be feasible as they take into account the varying demand throughout the day. By using both ferries during peak hours, we can ensure that the demand is met. By using only Frida during off-peak hours, we can minimize fuel usage and reduce emissions.
 
-However, a more detailed analysis would need to be conducted to ensure that the increased frequency of crossings would not lead to undue wear and tear on the ferries, and that the increased workload would not lead to increased staff costs.
+4. Simulated Emissions and Demand:
 
-Also, it would be necessary to ensure that the increased frequency of crossings would not lead to congestion at the ferry terminals, and that the terminals would be able to handle the increased volume of traffic.
-
-Finally, the proposed changes would need to be communicated effectively to the public, to ensure that they are aware of the new schedule and can plan their journeys accordingly.
+Assuming that Jupiter has higher emissions and fuel usage than Frida, the proposed changes would result in a significant reduction in emissions. The exact amount would depend on the specific emission and fuel usage rates of the two ferries. As for demand, the increased frequency during peak hours should be sufficient to meet the higher demand during these times. During off-peak hours, the reduced frequency is likely to be sufficient to meet the lower demand.

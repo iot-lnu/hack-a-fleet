@@ -18,7 +18,7 @@ with open("ferries.json", "r") as f:
     ferries = json.load(f)
 
 # Function to query OpenAI for optimization suggestions
-def query_openai(prompt, model="gpt-4", max_tokens=2000):
+def query_openai(prompt, model="gpt-4", max_tokens=3000):
     try:
         response = client.chat.completions.create(
             model=model,
@@ -58,10 +58,10 @@ Optimization Goals:
 {optimizations}
 
 Provide:
-1. A detailed optimized schedule in CSV format.
+1. A detailed optimized schedule in CSV format. DO NOT SIMPLIFY IT.
 2. Adjusted fleet assignments for peak and off-peak hours.
 3. Feasibility analysis for proposed changes, especially ensuring demand is met and emissions are reduced.
-4. No samples for schedule need a fully optimized detailed schedule
+4. Simulated amount of emissions decreased and demand being met. 
 """
 
 # Save optimized schedules to CSV
